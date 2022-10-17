@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+venv/
+
+# BUILD
+build/
+dist/
+*.egg-info
+
+# API CREDS
+api_keys.sh
+
+# EXTRA FILES
+test.json
