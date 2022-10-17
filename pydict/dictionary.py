@@ -40,6 +40,7 @@ class Search:
 
 
 class _SearchThread(Thread):
+    
     LANGUAGE_CODE: str = "en"
     ENDPOINT: str = "entries"
     
@@ -49,7 +50,7 @@ class _SearchThread(Thread):
         self.start()
 
     def results(self):
-        if not self.is_alive():
+        if self.is_alive():
             self.join()
         return self._results
 
