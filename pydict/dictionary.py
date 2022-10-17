@@ -23,7 +23,7 @@ class Search:
         self._search_thread = _SearchThread(word)
 
     def __repr__(self) -> str:
-        return f"{self.__class__.__qualname__}({self.word})"
+        return f"{self.__class__.__qualname__}({self.word!r})"
     
     def __str__(self) -> str:
         return self.word
@@ -40,7 +40,7 @@ class Search:
 
 
 class _SearchThread(Thread):
-    
+
     LANGUAGE_CODE: str = "en"
     ENDPOINT: str = "entries"
     
